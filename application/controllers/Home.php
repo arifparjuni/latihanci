@@ -7,7 +7,9 @@ class Home extends CI_Controller {
     }
 
     public function hello() {
-        echo "ini adalah function hello di controller Home";
+        
+        $this->load->view('home/index');
+        
     }
 
 }
