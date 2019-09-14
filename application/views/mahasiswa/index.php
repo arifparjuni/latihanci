@@ -1,7 +1,10 @@
-<div class="container">
+<div class="container mt-5">
+    <h2>Daftar Mahasiswa</h2>
     <div class="row">
+        <div class="col-md-5">
+            <a href="<?= base_url('mahasiswa/tambah'); ?>" class="btn btn-primary">Tambah Data</a>
+        </div>
         <div class="col-md-10">
-            <h2>Daftar Mahasiswa</h2>
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -10,6 +13,7 @@
                         <th scope="col">Nrp</th>
                         <th scope="col">Email</th>
                         <th scope="col">Jurusan</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,6 +24,10 @@
                         <td><?= $mhs['nrp']; ?></td>
                         <td><?= $mhs['email']; ?></td>
                         <td><?= $mhs['jurusan']; ?></td>
+                        <td>
+                        <a href="" class="btn btn-success">Edit</a>
+                        <a href="" class="btn btn-danger">Delete</a>
+                        </td>
                     </tr>
                     <?php $i++; ?>
                 <?php endforeach; ?>
